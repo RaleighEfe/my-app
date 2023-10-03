@@ -90,7 +90,7 @@ const NavBar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="origin-top-right absolute z-10 right-0 mt-2 w-full rounded-md shadow-lg bg-white">
+        <div className="origin-top-right z-10 right-0 mt-2 w-full rounded-md shadow-lg bg-white">
           <div className="grid grid-rows_[min-content] justify-center content-center gap-4 pt-20 pb-5">
             <Link href="#about" className="hover:text-primary">
               About
