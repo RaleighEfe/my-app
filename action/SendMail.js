@@ -10,15 +10,12 @@ const SendMail = ({ name, email, message }) => {
   let config = {
     method: "post",
     maxBodyLength: Infinity,
-    url: "http://localhost:3000/contact",
+    url: "http://localhost:3000/api/sendEmail",
     headers: {
       "Content-Type": "application/json",
     },
     data,
   };
-//   await axios.post("http://localhost:4000/send_mail", {    // use port 4000 not 3000
-//     name
-// });
 
   const mail = axios
     .request(config)

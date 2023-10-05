@@ -11,8 +11,8 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav>
-      <div className="fixed w-full z-20 top-0 left-0 bg-blue-950">
+    <div>
+    <nav className="fixed w-full z-20 top-0 left-0 bg-blue-950">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="text-white">Logo</div>
           <div className="flex md:order-2">
@@ -30,18 +30,12 @@ const NavBar = () => {
 
           <div
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
               <li>
                 <Link
                   href="/"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-primary"
-                  aria-current="page"
                 >
                   Home
                 </Link>
@@ -49,12 +43,7 @@ const NavBar = () => {
               <li>
                 <Link
                   href="#about"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-primary"
-                  aria-current="page"
                 >
                   About
                 </Link>
@@ -62,12 +51,7 @@ const NavBar = () => {
               <li>
                 <Link
                   href="#portfolio"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-primary"
-                  aria-current="page"
                 >
                   Portfolio
                 </Link>
@@ -75,12 +59,7 @@ const NavBar = () => {
               <li>
                 <Link
                   href="#contact"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-primary"
-                  aria-current="page"
                 >
                   Contact
                 </Link>
@@ -88,7 +67,8 @@ const NavBar = () => {
             </ul>
           </div>
         </div>
-      </div>
+           </nav>
+ 
       {isOpen && (
         <div className="origin-top-right z-10 right-0 mt-2 w-full rounded-md shadow-lg bg-white">
           <div className="grid grid-rows_[min-content] justify-center content-center gap-4 pt-20 pb-5">
@@ -104,7 +84,7 @@ const NavBar = () => {
           </div>
         </div>
       )}
-    </nav>
+ </div>
   );
 };
 
