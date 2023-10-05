@@ -1,6 +1,6 @@
 "use client";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
-import Buttons from "../atoms/Buttons";
+import WhatsAppButton from "../atoms/WhatsappButton";
 import Link from "next/link";
 import { useState } from "react";
 import Calendly from "../atoms/Calendly";
@@ -16,7 +16,7 @@ const NavBar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="text-white">Logo</div>
           <div className="flex md:order-2">
-            <Buttons>Schedule a Meet</Buttons>
+            <WhatsAppButton/>
             {/* <Calendly /> */}
             <button
               type="button"
