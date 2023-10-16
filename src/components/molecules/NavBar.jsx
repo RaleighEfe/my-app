@@ -12,11 +12,11 @@ const NavBar = () => {
   };
   return (
     <div>
-    <nav className="fixed w-full z-20 top-0 left-0 bg-blue-950">
+      <nav className="fixed w-full z-20 top-0 left-0 bg-blue-950">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="text-white">Logo</div>
           <div className="flex md:order-2">
-            <WhatsAppButton/>
+            <WhatsAppButton />
             {/* <Calendly /> */}
             <button
               type="button"
@@ -28,9 +28,7 @@ const NavBar = () => {
             </button>
           </div>
 
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          >
+          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
               <li>
                 <Link
@@ -67,10 +65,10 @@ const NavBar = () => {
             </ul>
           </div>
         </div>
-           </nav>
- 
+      </nav>
+
       {isOpen && (
-        <div className="origin-top-right z-10 right-0 mt-2 w-full rounded-md shadow-lg bg-white">
+        <div className="origin-top-right fixed z-10 right-0 mt-2 w-full rounded-md shadow-lg bg-white">
           <div className="grid grid-rows_[min-content] justify-center content-center gap-4 pt-20 pb-5">
             <Link href="#about" className="hover:text-primary">
               About
@@ -84,7 +82,7 @@ const NavBar = () => {
           </div>
         </div>
       )}
- </div>
+    </div>
   );
 };
 

@@ -2,7 +2,6 @@
 import Buttons from "../atoms/Buttons";
 import Input from "../atoms/Input";
 import { useState } from "react";
-import SendMail from "../../../action/SendMail";
 import Textarea from "../atoms/Textarea";
 
 const Form = () => {
@@ -18,18 +17,29 @@ const Form = () => {
     console.log("Hi");
     setIsSubmitting(true);
     try {
-      SendMail({ name, email, message }).then((res) => {
-        console.log(res.message);
-      });
-      setName("");
-      setEmail("");
-      setMessage("");
-      if (response.ok) {
-        setSubmitMessage("Email sent successfully");
-      } else {
-        setSubmitMessage("Error sending email");
-      }
-      setSubmitting(false);
+      fetch("/send-email", {
+        method: "POST",
+        body: {
+          name,
+          email,
+          message,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.success) {
+            setSubmitMessage("Email sent successfully");
+          } else {
+            setSubmitMessage("Error sending email");
+          }
+
+          setName("");
+          setEmail("");
+          setMessage("");
+        });
+
+      setIsSubmitting(false);
     } catch (error) {
       console.error(error);
       setSubmitMessage("Failed to send message. Please try again later.");
@@ -55,7 +65,7 @@ const Form = () => {
 
         <Input
           placeholder="Enter your Email"
-          type="text"
+          type="email"
           inputMode="email"
           id="email"
           value={email}
@@ -71,8 +81,8 @@ const Form = () => {
           <p
             className={`mt-2 text-sm ${
               submitMessage.includes("Error")
-                ? "text-green-600"
-                : "text-red-600"
+                ? "text-red-600"
+                : "text-green-600"
             }`}
           >
             {submitMessage}

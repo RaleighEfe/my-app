@@ -10,8 +10,8 @@ module.exports = {
       backgroundImage: {
         backgroundImage: "url('/assets/myImage.png')",
       },
-      fonts: {
-        primary: [],
+      fontFamily: {
+        sans: ["Satoshi", "sans-serif"],
       },
       backgroundColor: {
         primary: "#ff6000",

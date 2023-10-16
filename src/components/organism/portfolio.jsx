@@ -63,69 +63,83 @@ const Portfolio = () => {
           </div>
 
           {/* Portfolio Content */}
-          <Layout>
-            <div className="relative mx-auto">
-              <div className="flex gap-3 overflow-hidden" ref={scroll}>
-                {/* {schema.map((i, data) => ( */}
-                {/* <div key={i}> */}
-                <div className="grid grid-rows_[min-content] gap-4 w-full">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="h-56 w-full bg-slate-400 rounded-lg p-3">
-                      {/* <div className="bg-white h-full w-full rounded-lg"></div> */}
+          <div>
+            <Layout>
+              <div className="relative">
+                <div className="flex gap-3 scroll_bar_hide overflow-x-scroll">
+                  {/* {schema.map((i, data) => ( */}
+                  {/* <div key={i} className=""> */}
+                  <div className="grid grid-rows_[min-content] gap-4">
+                    {/* images */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="h-56 w-full bg-slate-400 rounded-lg p-3">
+                        {/* <div className="bg-white h-full w-full rounded-lg"></div> */}
+                      </div>
+                      <div className="h-56 w-full bg-slate-400 rounded-lg"></div>
                     </div>
-                    <div className="h-56 w-full bg-slate-400 rounded-lg"></div>
-                  </div>
-                  <div className="flex gap-3 justify-center">
-                    <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
-                      {/* {data.prompt1} */}
-                      Nextjs
-                    </span>
-                    <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
-                      {/* {data.prompt2} */}
-                      Tailwindcss
-                    </span>
-                    <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
-                      {/* {data.prompt3} */}
-                      Responsive design
-                    </span>
-                  </div>
-                  <Link href="">
-                    <div className="flex gap-2 justify-center">
-                      <h4 className="text-2xl text-white">
-                        {/* {data.title} */}
-                        Andemy Academy
-                      </h4>
-                      <span className="grid content-center justify-center">
-                        <FiExternalLink color="orange" size={24} />
-                      </span>
+
+                    {/* Stacks */}
+                    <div className="flex justify-center">
+                      <div className=" flex flex-col md:flex-row w-fit gap-3">
+                        <div className="flex gap-3 justify-center">
+                          <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
+                            {/* {data.prompt1} */}
+                            Nextjs
+                          </span>
+                          <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
+                            {/* {data.prompt2} */}
+                            Tailwindcss
+                          </span>
+                        </div>
+                        <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
+                          {/* {data.prompt3} */}
+                          Responsive design
+                        </span>
+                      </div>
                     </div>
-                  </Link>
-                  <p className="text-lg text-white text-center">
-                    {/* {data.text} */}
-                    An online platform that offers introductory classes to tech
-                    enthusiasts in web programming and UI/UX design.
-                  </p>
+
+                    {/* project link */}
+                    <Link href="">
+                      <div className="flex gap-2 justify-center">
+                        <h4 className="text-2xl text-white">
+                          {/* {data.title} */}
+                          Andemy Academy
+                        </h4>
+                        <span className="grid content-center justify-center">
+                          <FiExternalLink color="orange" size={24} />
+                        </span>
+                      </div>
+                    </Link>
+                    {/* description */}
+                    <p className="text-lg text-white text-center">
+                      {/* {data.text} */}
+                      An online platform that offers introductory classes to
+                      tech enthusiasts in web programming and UI/UX design.
+                    </p>
+                  </div>
+                  {/* </div> */}
+                  {/* ))} */}
                 </div>
-                {/* </div> */}
-                {/* ))} */}
+                {/* Slide Controls */}
+                <div className="flex gap-3 justify-center pt-4">
+                  <button className="md:p-1 rounded-full md:absolute md:bottom-[65%] md:-left-5 md:bg-gray-400">
+                    <span className="inline-flex items-center justify-center p-3 rounded-full bg-gray-400 md:bg-blue-950">
+                      <AiOutlineArrowLeft className="text-white text-lg" />
+                      <span className="sr-only">Previous</span>
+                    </span>
+                  </button>
+                  <button className="md:p-1 rounded-full md:absolute md:bottom-[65%] md:-right-5 md:bg-white">
+                    <span className="grid content-center justify-center p-3 rounded-full bg-primary">
+                      <AiOutlineArrowRight className="text-white text-lg" />
+                      <span className="sr-only">Next</span>
+                    </span>
+                  </button>
+                </div>
               </div>
-              {/* Slide Controls */}
-              <div className="flex gap-3 justify-center pt-4">
-                <button className="md:p-1 rounded-full md:absolute md:bottom-[65%] md:-left-5 md:bg-gray-400">
-                  <span className="inline-flex items-center justify-center p-3 rounded-full bg-gray-400 md:bg-blue-950">
-                    <AiOutlineArrowLeft className="text-white text-lg" />
-                    <span className="sr-only">Previous</span>
-                  </span>
-                </button>
-                <button className="md:p-1 rounded-full md:absolute md:bottom-[65%] md:-right-5 md:bg-white">
-                  <span className="grid content-center justify-center p-3 rounded-full bg-primary">
-                    <AiOutlineArrowRight className="text-white text-lg" />
-                    <span className="sr-only">Next</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </Layout>
+            </Layout>
+
+            {/* */}
+          </div>
         </Layout>
       </section>
     </div>
