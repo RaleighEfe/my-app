@@ -69,7 +69,7 @@ const Portfolio = () => {
                 <div className="flex gap-3 scroll_bar_hide overflow-x-scroll">
                   {/* {schema.map((i, data) => ( */}
                   {/* <div key={i} className=""> */}
-                  <div className="grid grid-rows_[min-content] gap-4">
+                  <div className="grid grid-rows_[min-content] gap-4 justify-center">
                     {/* images */}
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="h-56 w-full bg-slate-400 rounded-lg p-3">

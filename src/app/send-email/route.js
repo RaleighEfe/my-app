@@ -3,8 +3,9 @@ import nodemailer from "nodemailer";
 //would have to install cors
 
 export async function POST(req) {
-  const { name, email, message } = req.body;
+  const request = await req.json();
 
+  const { name, email, message } = request;
   // Create a Nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -28,12 +29,14 @@ export async function POST(req) {
     });
     return Response.json({
       success: true,
-      message: "Email sent successfully"
+      message: "Email sent successfully",
+      request,
     });
   } catch (error) {
     return Response.json({
       success: false,
-      message: `An error occurred; ${error.message}`
+      request,
+      message: `An error occurred; ${error.message}`,
     });
   }
 }

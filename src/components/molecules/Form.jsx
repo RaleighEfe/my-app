@@ -5,11 +5,22 @@ import { useState } from "react";
 import Textarea from "../atoms/Textarea";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [mailData, setMailData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+
+  function handleInput(evt) {
+    setMailData((prevState) => {
+      return {
+        ...prevState,
+        [evt.target.name]: evt.target.value,
+      };
+    });
+  }
 
   const handleSubmit = async (e, data) => {
     e.preventDefault();
@@ -19,24 +30,21 @@ const Form = () => {
     try {
       fetch("/send-email", {
         method: "POST",
-        body: {
-          name,
-          email,
-          message,
-        },
+        body: JSON.stringify(mailData),
       })
-        .then((res) => res.json())
+        // .then((res) => res.json())
         .then((data) => {
           console.log(data);
           if (data.success) {
-            setSubmitMessage("Email sent successfully");
-          } else {
             setSubmitMessage("Error sending email");
+          } else {
+            setSubmitMessage("Email sent successfully");
           }
-
-          setName("");
-          setEmail("");
-          setMessage("");
+          setMailData({
+            name: "",
+            email: "",
+            message: "",
+          });
         });
 
       setIsSubmitting(false);
@@ -44,8 +52,6 @@ const Form = () => {
       console.error(error);
       setSubmitMessage("Failed to send message. Please try again later.");
     }
-
-    setIsSubmitting(false);
   };
 
   return (
@@ -58,24 +64,24 @@ const Form = () => {
           placeholder="Enter your Name"
           type="text"
           inputMode="text"
-          id="name"
-          value={name}
-          setValue={setName}
+          name="name"
+          value={mailData.name}
+          setValue={handleInput}
         />
 
         <Input
           placeholder="Enter your Email"
           type="email"
           inputMode="email"
-          id="email"
-          value={email}
-          setValue={setEmail}
+          name="email"
+          value={mailData.email}
+          setValue={handleInput}
         />
         <Textarea
           placeholder="Add description"
-          setValue={setMessage}
-          id="message"
-          value={message}
+          setValue={handleInput}
+          name="message"
+          value={mailData.message}
         />
         {submitMessage && (
           <p
