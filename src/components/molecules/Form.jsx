@@ -24,8 +24,6 @@ const Form = () => {
 
   const handleSubmit = async (e, data) => {
     e.preventDefault();
-
-    console.log("Hi");
     setIsSubmitting(true);
     try {
       fetch("/send-email", {

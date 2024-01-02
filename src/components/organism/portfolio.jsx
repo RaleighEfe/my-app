@@ -55,7 +55,7 @@ const Portfolio = () => {
             <div className="grid justify-center content-center md:justify-end md:content-end">
               <Link
                 href="/all-works"
-                className="bg-primary px-3 py-2 rounded-lg text-white text-base"
+                className="bg-primary px-3 py-2 rounded-lg text-white text-base hover:bg-orange-600"
               >
                 View All My Works
               </Link>
@@ -67,8 +67,6 @@ const Portfolio = () => {
             <Layout>
               <div className="relative">
                 <div className="flex gap-3 scroll_bar_hide overflow-x-scroll">
-                  {/* {schema.map((i, data) => ( */}
-                  {/* <div key={i} className=""> */}
                   <div className="grid grid-rows_[min-content] gap-4 justify-center">
                     {/* images */}
                     <div className="grid md:grid-cols-2 gap-4">
@@ -83,16 +81,13 @@ const Portfolio = () => {
                       <div className=" flex flex-col md:flex-row w-fit gap-3">
                         <div className="flex gap-3 justify-center">
                           <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
-                            {/* {data.prompt1} */}
                             Nextjs
                           </span>
                           <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
-                            {/* {data.prompt2} */}
                             Tailwindcss
                           </span>
                         </div>
                         <span className="px-3 py-1 grid justify-center content-center bg-gray-100 rounded-3xl">
-                          {/* {data.prompt3} */}
                           Responsive design
                         </span>
                       </div>
@@ -112,16 +107,13 @@ const Portfolio = () => {
                     </Link>
                     {/* description */}
                     <p className="text-lg text-white text-center">
-                      {/* {data.text} */}
                       An online platform that offers introductory classes to
                       tech enthusiasts in web programming and UI/UX design.
                     </p>
                   </div>
-                  {/* </div> */}
-                  {/* ))} */}
                 </div>
                 {/* Slide Controls */}
-                <div className="flex gap-3 justify-center pt-4">
+                {/* <div className="flex gap-3 justify-center pt-4">
                   <button className="md:p-1 rounded-full md:absolute md:bottom-[65%] md:-left-5 md:bg-gray-400">
                     <span className="inline-flex items-center justify-center p-3 rounded-full bg-gray-400 md:bg-blue-950">
                       <AiOutlineArrowLeft className="text-white text-lg" />
@@ -134,7 +126,7 @@ const Portfolio = () => {
                       <span className="sr-only">Next</span>
                     </span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </Layout>
 

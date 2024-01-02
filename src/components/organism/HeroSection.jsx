@@ -3,7 +3,7 @@ import Icons from "../atoms/Icons";
 const HeroSection = () => {
   return (
     <div>
-      <section className="relative h-[80vh] grid grid-cols content-center bg-black/70">
+      <section className="h-[80vh] grid grid-cols content-center bg-black/70">
         {/* <div className="bg-backgroundImage h-full w-full bg-cover bg-black/70"> */}
         <div className="w-3/4 grid mx-auto">
           <div className="grid grid-rows-3 gap-1">

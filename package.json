@@ -28,6 +28,9 @@
   "axios": "^1.5.1",
   
     
+  "classnames": "^2.5.1",
+  
+    
   "next": "latest",
   
     

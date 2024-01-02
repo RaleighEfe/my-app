@@ -5,7 +5,6 @@ import Portfolio from "@/components/organism/portfolio";
 import Footer from "@/components/molecules/Footer";
 import Contact from "@/components/organism/Contact";
 
-
 export default function Home() {
   return (
     <div>
