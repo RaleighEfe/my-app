@@ -7,14 +7,14 @@ import CropText from "../atoms/CropText";
 const Works = () => {
   const schema = [
     {
-      title: "phil",
-      desc: "An online platform that offers introductory classes to tech enthusiasts in web programming and UI/UX design.",
-      site: "https://www.andemyacademy.com/",
+      title: "Church App",
+      desc: "this is the best eBook and audiobook app. Switch seamlessly between reading and listening, and discover a wide library of stories for hours of entertainment on the road.",
+      site: "https://church-app-alpha.vercel.app/",
     },
     {
-      title: "three",
-      desc: "Book closet is the best eBook and audiobook app. Switch seamlessly between reading and listening, and discover a wide library of stories for hours of entertainment on the road.",
-      site: "https://book-closet.vercel.app/",
+      title: "Andemy Academy",
+      desc: "An online platform that offers introductory classes to tech enthusiasts in web programming and UI/UX design.",
+      site: "https://www.andemyacademy.com/",
     },
   ];
   return (

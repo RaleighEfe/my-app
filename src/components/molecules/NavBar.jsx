@@ -19,7 +19,7 @@ const NavBar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="text-white text-lg md:text-3xl">Logo</div>
         <div className="flex md:order-2">
-          <WhatsAppButton/>
+          <WhatsAppButton />
           {/* <Buttons type="filled">Start WhatsApp Chat</Buttons> */}
           <button
             type="button"
@@ -71,10 +71,10 @@ const NavBar = () => {
       {isOpen && (
         <div className="origin-top-right fixed z-3 right-0 mt-2 w-3/4 rounded-md shadow-lg bg-white p-5">
           <button
-            className="grid text-lg justify-end"
+            className="grid text-lg justify-center"
             onClick={handleToggleClose}
           >
-            <MdOutlineCancel size={24}/>
+            <MdOutlineCancel size={24} />
           </button>
           <div className="grid grid-rows_[min-content] justify-center content-center gap-4">
             <Link href="/" className="hover:text-primary">

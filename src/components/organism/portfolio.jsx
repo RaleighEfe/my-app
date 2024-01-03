@@ -27,9 +27,9 @@ const Portfolio = () => {
       prompt1: "Nextjs",
       prompt2: "Tailwind css",
       prompt3: "Responsive design",
-      title: "Andemy Academy",
-      text: "An online platform that offers introductory classes to tech enthusiasts in web programming and UI/UX design.",
-      link: "https://www.andemyacademy.com/",
+      title: "Book Closet",
+      text: "Book closet is the best eBook and audiobook app. Switch seamlessly between reading and listening, and discover a wide library of stories for hours of entertainment on the road.",
+      link: "https://church-app-alpha.vercel.app/",
     },
     {
       image1: "",
@@ -37,9 +37,9 @@ const Portfolio = () => {
       prompt1: "Nextjs",
       prompt2: "Tailwind css",
       prompt3: "Responsive design",
-      title: "Book Closet",
-      text: "Book closet is the best eBook and audiobook app. Switch seamlessly between reading and listening, and discover a wide library of stories for hours of entertainment on the road.",
-      link: "https://book-closet.vercel.app/",
+      title: "Andemy Academy",
+      text: "An online platform that offers introductory classes to tech enthusiasts in web programming and UI/UX design.",
+      link: "https://www.andemyacademy.com/",
     },
   ];
   return (
