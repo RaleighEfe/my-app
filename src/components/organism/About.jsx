@@ -29,8 +29,8 @@ const About = () => {
             <p className="text-lg font-normal py-5">
               A dedicated web developer. I develop dynamic online experiences
               through user-centric design and a solid knowledge of front-end
-              technology. I create clean and intuitive interfaces using HTML,
-              CSS, JavaScript, and frameworks like as React. I work closely with
+              technology, creating clean and intuitive interfaces using HTML,
+              CSS, JavaScript, and frameworks like as React. Working closely with
               clients to ensure their objectives are realized. My work is
               motivated by lifelong learning and remaining current with industry
               developments. {"Let's"} go on an exciting web development

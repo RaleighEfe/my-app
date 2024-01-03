@@ -10,10 +10,10 @@ const Footer = () => {
             © 2023 <Link href="/">MyPortfolio™</Link>. All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
-            <Icons type="Discord" />
             <Icons type="LinkedIn" />
             <Icons type="GitHub" />
             <Icons type="Twitter" />
+            <Icons type="Discord" />
           </div>
         </div>
       </footer>

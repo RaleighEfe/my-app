@@ -13,10 +13,10 @@ const HeroSection = () => {
               <span className="text-primary">Frontend Developer</span>
             </p>
             <div className="flex space-x-5 md:mt-0">
-              <Icons type="Discord" />
               <Icons type="LinkedIn" />
               <Icons type="GitHub" />
               <Icons type="Twitter" />
+              <Icons type="Discord" />
             </div>
           </div>
         </div>
