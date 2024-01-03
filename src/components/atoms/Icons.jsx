@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BiLogoTwitter } from "react-icons/bi";
 import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
+import { PiMediumLogoFill } from "react-icons/pi";
 
 const Icons = ({ type }) => {
   switch (type) {
@@ -50,13 +51,14 @@ const Icons = ({ type }) => {
       return (
         <div>
           <Link
-            href=""
+            href="https://medium.com/@raleighefe"
             target="_blank"
             rel="noreferrer"
             className="text-gray-400 hover:text-gray-900"
           >
-            <BsDiscord size={20} />
-            <span className="sr-only">Discord account</span>
+            {/* <BsDiscord size={20} /> */}
+            <PiMediumLogoFill size={20} />
+            <span className="sr-only">Medium account</span>
           </Link>
         </div>
       );
